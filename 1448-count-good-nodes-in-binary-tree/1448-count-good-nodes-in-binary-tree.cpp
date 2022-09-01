@@ -17,10 +17,9 @@ public:
             return count;
         }
         count++;
-        int maxl=root->val;
-        int maxr=root->val;
-        dfs(root->left,maxl);
-        dfs(root->right,maxr);
+        int max=root->val;
+        dfs(root->left,max);
+        dfs(root->right,max);
         return count;
     }
     void dfs(TreeNode* root,int max ){
